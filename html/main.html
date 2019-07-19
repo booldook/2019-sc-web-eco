@@ -47,12 +47,19 @@
 	</div>
 	<!-- banner -->
 	<div class="banner-wrap position-relative overflow-hidden pt-serif">
-		<img src="../img/ecofood_01_x1024.png" alt="메인배너" class="banner-img">
-		<div class="banner-slogan position-absolute w-100 text-center">
+		<img src="../img/ecofood_01_x1024.png" alt="메인배너" 
+		class="banner-img wow fadeIn"
+		data-wow-duration="1s">
+		<div 
+		class="banner-slogan position-absolute w-100 text-center wow bounceInUp"
+		data-wow-delay="0.75s" data-wow-duration="0.5s">
 			<h1 class="display-4">Center for<br>Healthy Nutrition</h1>
 			<h4 class="my-3 pt-3">Call us: +1-234-5678-9012</h4>
 			<p>Daily from 9:00 to 19:00</p>
 		</div>
 	</div>
+	<script>
+	new WOW().init();
+	</script>
 </body>
 </html>
