@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+/* font-family: 'PT Serif', serif; */
+
+.pt-serif {font-family: 'PT Serif', serif;}
+
+/* Media */
+/* 0 ~ 575 - 스마트폰 세로 */
+.top-menu {display: block;}
+.logo-img {display: none;}
+.navi-wrap {display: none;}
+
+/* 576 ~ 767 - sm - 스마트폰 가로 */
+@media screen and (min-width: 576px) {
+
+}
+/* 768 ~ 991 - md - 태블릿 세로 */
+@media screen and (min-width: 768px) {
+	
+}
+/* 992 ~ 1199 - lg - 태블릿 가로 */
+@media screen and (min-width: 992px) {
+	.top-menu {display: none;}
+	.logo-img {display: inline-block;}
+	.navi-wrap {display: flex;}
+}
+/* 1200 ~ - xl - PC */
+@media screen and (min-width: 1200px) {
+
+}
+
