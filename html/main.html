@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/wow.min.js"></script>
 </head>
+
 <body>
 	<!--
 		0: 0 
@@ -40,26 +42,33 @@
 			<li class="navi mx-2">BUY THEME!</li>
 		</ul>
 		<ul class="link-wrap d-flex">
-			<li><i class="fas fa-search mx-4 mx-lg-2"></i></li>
-			<li><i class="fas fa-shopping-bag mx-4 mx-lg-2"></i></li>
-			<li><i class="fas fa-user mx-4 mx-lg-2"></i></li>
+			<li>
+				<a href="#" data-toggle="tooltip" title="Search" class="tooltip-bt">
+					<i class="fas fa-search mx-4 mx-lg-2 text-dark"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#" data-toggle="tooltip" title="Cart" class="tooltip-bt">
+					<i class="fas fa-shopping-bag mx-4 mx-lg-2 text-dark"></i>
+				</a>
+			</li>
+			<li class="position-relative">
+				<i class="fas fa-user mx-4 mx-lg-2"></i>
+				<div class="tip">My Account</div>
+			</li>
 		</ul>
 	</div>
 	<!-- banner -->
 	<div class="banner-wrap position-relative overflow-hidden pt-serif">
-		<img src="../img/ecofood_01_x1024.png" alt="메인배너" 
-		class="banner-img wow fadeIn"
-		data-wow-duration="1s">
-		<div 
-		class="banner-slogan position-absolute w-100 text-center wow bounceInUp"
-		data-wow-delay="0.75s" data-wow-duration="0.5s">
+		<img src="../img/ecofood_01_x1024.png" alt="메인배너" class="banner-img wow fadeIn" data-wow-duration="1s">
+		<div class="banner-slogan position-absolute w-100 text-center wow bounceInUp" data-wow-delay="0.75s"
+			data-wow-duration="0.5s">
 			<h1 class="display-4">Center for<br>Healthy Nutrition</h1>
 			<h4 class="my-3 pt-3">Call us: +1-234-5678-9012</h4>
 			<p>Daily from 9:00 to 19:00</p>
 		</div>
 	</div>
-	<script>
-	new WOW().init();
-	</script>
+	<script src="../js/main.js"></script>
 </body>
+
 </html>

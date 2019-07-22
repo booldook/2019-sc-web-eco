@@ -6,6 +6,9 @@
 */
 
 .pt-serif {font-family: 'PT Serif', serif;}
+.tip {background-color: #111; position: absolute; padding: 6px 12px; color: #f8f8f8; font-size: 0.75rem; width: 90px; z-index: 9999; border-radius: 4px; left: -30px; top: 30px;}
+.tip:after {display: block; content:''; width: 10px; height: 10px; background-color: #111; transform: rotate(45deg) translateX(-50%); position: absolute; top: 0px; left: 50%;}
+
 
 /* Media */
 /* 0 ~ 575 - 스마트폰 세로 */
