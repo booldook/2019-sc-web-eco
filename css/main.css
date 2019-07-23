@@ -30,23 +30,29 @@
 .logo-img {display: none;}
 .navi-wrap {display: none;}
 
+.banner-wrap {font-size: 1rem; /* 8px */}
 .banner-img {width: 130%; margin-left: -15%;}
-.banner-slogan {top: 5rem;}
-.banner-slogan > h4 {color: #a8715c;}
+.banner-slogan {top: 2.5em;}
+.banner-slogan > h1 {font-size: 2em;}
+.banner-slogan > h4 {color: #a8715c; font-size: 1.5em;}
+.banner-slogan > p {font-size: 1em;}
+
+
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {
-
+	
 }
 /* 768 ~ 991 - md - 태블릿 세로 */
 @media screen and (min-width: 768px) {
-	
+	.banner-wrap {font-size: 1.25rem; /* 8px */}
 }
 /* 992 ~ 1199 - lg - 태블릿 가로 */
 @media screen and (min-width: 992px) {
 	.top-menu {display: none;}
 	.logo-img {display: inline-block;}
 	.navi-wrap {display: flex;}
+	.banner-wrap {font-size: 1.5rem; /* 8px */}
 }
 /* 1200 ~ - xl - PC */
 @media screen and (min-width: 1200px) {
