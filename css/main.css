@@ -10,7 +10,8 @@
 .tip:after {display: block; content:''; width: 10px; height: 10px; background-color: #111; transform: rotate(45deg) translateX(-50%); position: absolute; top: 0px; left: 50%;}
 
 .top-sub {top: 30px; left: -30px; z-index: 9999; 
-	display: flex; box-shadow: 0 3px 5px rgba(0,0,0,0.2); border: 1px solid #ddd; position: absolute; background-color: #fff;}
+	display: flex; box-shadow: 0 3px 5px rgba(0,0,0,0.2); border: 1px solid #ddd; position: absolute; background-color: #fff; 
+	display: none; opacity: 0; transform: translateY(30px); transition: all 0.5s;}
 .top-sub-col {width: 300px; min-height: 400px;}
 
 /* transition 복습 */
