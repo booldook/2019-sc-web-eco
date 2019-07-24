@@ -37,11 +37,16 @@
 .banner-slogan > h4 {color: #a8715c; font-size: 1.5em;}
 .banner-slogan > p {font-size: 1em;}
 
+.item:hover {color: #66a765;}
+.item > li:first-child {max-width: 70%; margin: auto;}
+.item img {transition: all 1s;}
+.item-img-hover {transform: scale(1.2);}
+
 
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {
-	
+	.item > li:first-child {max-width: 100%;}
 }
 /* 768 ~ 991 - md - 태블릿 세로 */
 @media screen and (min-width: 768px) {

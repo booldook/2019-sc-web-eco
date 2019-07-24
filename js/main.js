@@ -39,3 +39,11 @@ $(".navi").mouseleave(function(){
 		$(this).css({"display":"none"});
 	});
 });
+
+// items
+$(".item").mouseenter(function(){
+	$(this).find("img").addClass("item-img-hover");
+});
+$(".item").mouseleave(function(){
+	$(this).find("img").removeClass("item-img-hover");
+});
