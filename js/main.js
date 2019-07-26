@@ -92,3 +92,19 @@ $(".item").mouseleave(function(){
 });
 
 
+// ads
+var ads = [
+	{
+		src: "../img/ecofood_02_x1024.png",
+		title: "Vegans Foods",
+		desc: "Nutrition program without animal products.",
+		link: "https://naver.com",
+		position: "L"
+	},{
+		src: "../img/ecofood_03_x1024.png",
+		title: "Diabetic Nutrition",
+		desc: "Maximum comfortable gradual weight loss<br>and the establishment of metabolic processes",
+		link: "https://daum.net",
+		position: "R"
+	}
+];
