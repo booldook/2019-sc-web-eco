@@ -5,6 +5,8 @@ $(".pager span").click(function(){
 	adsAni();
 });
 function adsAni(){
-	$(".ads-img").stop().animate({"opacity": 0}, 2000);
-	$(".ads-img").eq(adsNow).stop().animate({"opacity": 1}, 2000);
+	$(".ads-img").stop().animate({"opacity": 0}, 1000);
+	$(".ads-img").eq(adsNow).stop().animate({"opacity": 1}, 1000);
+	$(".ads-slogan").stop().animate({"top": "80%", "opacity": 0}, 1000);
+	$(".ads-slogan").eq(adsNow).stop().animate({"top": "40%", "opacity": 1}, 1000);
 }
