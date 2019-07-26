@@ -99,12 +99,39 @@ var ads = [
 		title: "Vegans Foods",
 		desc: "Nutrition program without animal products.",
 		link: "https://naver.com",
-		position: "L"
+		position: "left"
 	},{
 		src: "../img/ecofood_03_x1024.png",
 		title: "Diabetic Nutrition",
 		desc: "Maximum comfortable gradual weight loss<br>and the establishment of metabolic processes",
 		link: "https://daum.net",
-		position: "R"
+		position: "right"
 	}
 ];
+
+// for(var i=0; i<ads.length; i++) {
+var html = '';
+var adsNow = 0;
+var adsEnd = ads.length - 1;
+for(var i in ads) {
+	html  = '<img src="'+ads[i].src+'" class="slogan-img w-100 position-absolute" style="top: 0; opacity: 0;">';
+	html += '<div class="slogan-ads position-absolute pt-serif d-flex justify-content-center align-items-center w-50 h-100" style="top: 0; '+ads[i].position+': 0; z-index: 99; opacity: 0;">';
+	html += '<ul>';
+	html += '<li class="title">'+ads[i].title+'</li>';
+	html += '<li class="desc">'+ads[i].desc+'</li>';
+	html += '<li><a href="'+ads[i].link+'" class="btn btn-success">Discover Now!</a></li>';
+	html += '</ul>';
+	html += '</div>';
+	$(".ads").append(html);
+	$(".ads-pager").append('<span class="pointer">●</span>');
+}
+
+function adsAni() {
+	$(".slogan-img").stop().animate({"opacity": 0}, 2000);
+	$(".slogan-img").eq(adsNow).stop().animate({"opacity": 1}, 2000);
+}
+
+$(".ads-pager span").click(function(){
+	adsNow = $(this).index();
+	adsAni();
+});
