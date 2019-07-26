@@ -41,9 +41,46 @@ $(".navi").mouseleave(function(){
 });
 
 // items
+var items = [
+	{
+		src: "../img/ecofood_10_400x.png", 
+		title: "Weight Loss", 
+		desc: "A delicious and easy way to join a healthy diet and control your weight and well-being."
+	},
+	{
+		src: "../img/ecofood_11_400x.png", 
+		title: "Balanced Diet", 
+		desc: "Tasty and easy way to join a healthy diet, control your weight and health."
+	},
+	{
+		src: "../img/ecofood_12_400x.png", 
+		title: "Sports Nutrition", 
+		desc: "Active growth of muscle mass, relief formation, drying - choose your own mode."
+	},
+	{
+		src: "../img/ecofood_13_400x.png", 
+		title: "Food for Moms", 
+		desc: "Nutrition program for women in position and breastfed women."
+	},
+	{
+		src: "../img/ecofood_14_400x.png", 
+		title: "Eco-Life", 
+		desc: "Juices and smoothies, fruits and vegetables - all for a comfortable and tasty cleansing of the body (detox)."
+	},
+	{
+		src: "../img/ecofood_15_400x.png", 
+		title: "Without Meat", 
+		desc: "Weight loss programs without animal products."
+	}
+];
+
+
+
 $(".item").mouseenter(function(){
 	$(this).find("img").addClass("item-img-hover");
 });
 $(".item").mouseleave(function(){
 	$(this).find("img").removeClass("item-img-hover");
 });
+
+
