@@ -1,4 +1,5 @@
 var adsNow = 0;
+
 $(".pager span").click(function(){
 	adsNow = $(this).index();
 	adsAni();
