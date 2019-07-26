@@ -74,7 +74,15 @@ var items = [
 	}
 ];
 
-
+for(var i=0, html=''; i<items.length; i++) {
+	html  = '<ul class="item p-3 mb-4 col-sm-6 col-md-4">';
+	html += '<li class="rounded-circle overflow-hidden">';
+	html += '<img src="'+items[i].src+'" class="w-100"></li>';
+	html += '<li class="mt-5 mb-3"><h4>'+items[i].title+'</h4></li>';
+	html += '<li class="text-secondary">'+items[i].desc+'</li>';
+	html += '</ul>';
+	$(".items > .row").append(html);
+}
 
 $(".item").mouseenter(function(){
 	$(this).find("img").addClass("item-img-hover");
