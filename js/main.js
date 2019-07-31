@@ -1,9 +1,3 @@
-// WOW 시동
-new WOW().init();
-
-// tooltip 시동
-$(".tooltip-bt").tooltip();
-
 $(".fa-user").mouseover(function(){
 	$(this).next().css({
 		"opacity":1, "transform":"translateY(0)"
@@ -193,3 +187,19 @@ $(".ads-wrap, .ads, .ads-pager").hover(function(){
 
 // popular
 for(var i=0; i<7; i++) $(".prds").append($(".prd").eq(0).clone());
+$(".popular-wrap .prd").mouseenter(function(){
+	$(this).find(".prd-icon").css({"opacity": 1});
+});
+$(".popular-wrap .prd").mouseleave(function(){
+	$(this).find(".prd-icon").css({"opacity": 0});
+});
+
+
+
+
+
+// WOW 시동
+new WOW().init();
+
+// tooltip 시동
+$(".tooltip-bt").tooltip();

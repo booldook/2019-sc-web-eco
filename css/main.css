@@ -57,7 +57,7 @@
 .popular-wrap .prd-icon {position: absolute; 
 	background-color: rgba(250, 240, 200, 0.9); width: 50px; height: 50px; 
 	line-height: 50px; text-align: center; border-radius: 25px; right: 1rem;
-	transition: all 0.7s;}
+	transition: all 0.7s; opacity: 0;}
 .popular-wrap .prd-icon:hover {color: #f8f8f8; background-color: #66a765;}
 .popular-wrap .prd-view {top: 1rem;}
 .popular-wrap .prd-login {top: 5rem;}
