@@ -111,11 +111,14 @@ var ads = [
 
 // for(var i=0; i<ads.length; i++) {
 var html = '';
-var adsNow = 0;
+var adsNow = 1;
 var adsEnd = ads.length - 1;
+var adsSpeed = 1000;
+var adsGap = 4000;
+var interval;
 for(var i in ads) {
-	html  = '<img src="'+ads[i].src+'" class="slogan-img w-100 position-absolute" style="top: 0; opacity: 0;">';
-	html += '<div class="slogan-ads position-absolute pt-serif d-flex justify-content-center align-items-center w-50 h-100" style="top: 0; '+ads[i].position+': 0; z-index: 99; opacity: 0;">';
+	html  = '<img src="'+ads[i].src+'" class="ads-img w-100 position-absolute" style="top: 0; opacity: 0;">';
+	html += '<div class="ads-slogan position-absolute pt-serif d-flex justify-content-center align-items-center w-50 h-100" style="top: 0; '+ads[i].position+': 0; z-index: 99; opacity: 1;">';
 	html += '<ul>';
 	html += '<li class="title">'+ads[i].title+'</li>';
 	html += '<li class="desc">'+ads[i].desc+'</li>';
@@ -126,9 +129,40 @@ for(var i in ads) {
 	$(".ads-pager").append('<span class="pointer">●</span>');
 }
 
+// 배너이미지의 높이를 가져다가 .ads의 높이를 생성
+$(window).resize(function(){
+	$(".ads").outerHeight($(".ads-img").eq(0).outerHeight());
+});
+$(".ads-img").imagesLoaded(function(){
+	$(window).trigger("resize");
+});
+
+adsAni();
+interval = setInterval(adsAni, adsGap);
 function adsAni() {
-	$(".slogan-img").stop().animate({"opacity": 0}, 2000);
-	$(".slogan-img").eq(adsNow).stop().animate({"opacity": 1}, 2000);
+	// pager 처리
+	$(".ads-pager span").removeClass("text-dark").addClass("text-muted");
+	$(".ads-pager span").eq(adsNow).removeClass("text-muted").addClass("text-dark");
+
+	// slogan 애니메이션
+	$(".ads-slogan").stop().animate({"top": "50%", "opacity": 0}, adsSpeed/2, function(){
+		$(this).css({"top": 0});
+	});
+	if(ads[adsNow].position == "left") {
+		$(".ads-slogan").eq(adsNow).css({"left": "-100%"});
+		$(".ads-slogan").eq(adsNow).stop().animate({"left": 0, "opacity": 1}, adsSpeed/2);
+	}
+	if(ads[adsNow].position == "right") {
+		$(".ads-slogan").eq(adsNow).css({"right": "-100%"});
+		$(".ads-slogan").eq(adsNow).stop().animate({"right": 0, "opacity": 1}, adsSpeed/2);
+	}
+
+	// 배경이미지 애니메이션
+	$(".ads-img").stop().animate({"opacity": 0}, adsSpeed);
+	$(".ads-img").eq(adsNow).stop().animate({"opacity": 1}, adsSpeed, function(){
+		if(adsNow == adsEnd) adsNow = 0;
+		else adsNow++;
+	});
 }
 
 $(".ads-pager span").click(function(){

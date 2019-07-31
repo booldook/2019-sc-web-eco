@@ -42,20 +42,20 @@
 .item img {transition: all 1s;}
 .item-img-hover {transform: scale(1.2);}
 
-.slogan-ads {font-size: 0.25rem;}
-.slogan-ads .title {font-size: 3em;}
-.slogan-ads .desc {font-size: 1.25em; margin: 1.25em 0;}
-.slogan-ads .btn {padding: 0.5em 1em;}
+.ads-slogan {font-size: 0.25rem;}
+.ads-slogan .title {font-size: 3em;}
+.ads-slogan .desc {font-size: 1.25em; margin: 1.25em 0;}
+.ads-slogan .btn {padding: 0.5em 1em;}
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {
 	.item > li:first-child {max-width: 100%;}
-	.slogan-ads {font-size: 0.5rem;}
+	.ads-slogan {font-size: 0.5rem;}
 }
 /* 768 ~ 991 - md - 태블릿 세로 */
 @media screen and (min-width: 768px) {
 	.banner-wrap {font-size: 1.25rem; /* 8px */}
-	.slogan-ads {font-size: 0.75rem;}
+	.ads-slogan {font-size: 0.75rem;}
 }
 /* 992 ~ 1199 - lg - 태블릿 가로 */
 @media screen and (min-width: 992px) {
@@ -63,7 +63,7 @@
 	.logo-img {display: inline-block;}
 	.navi-wrap {display: flex;}
 	.banner-wrap {font-size: 1.5rem; /* 8px */}
-	.slogan-ads {font-size: 1rem;}
+	.ads-slogan {font-size: 1rem;}
 }
 /* 1200 ~ - xl - PC */
 @media screen and (min-width: 1200px) {
