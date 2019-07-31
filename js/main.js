@@ -106,6 +106,12 @@ var ads = [
 		desc: "Maximum comfortable gradual weight loss<br>and the establishment of metabolic processes",
 		link: "https://daum.net",
 		position: "right"
+	},{
+		src: "../img/ecofood_01_x1024-center.png",
+		title: "Center Nutrition",
+		desc: "Maximum comfortable gradual weight loss<br>and the establishment of metabolic processes",
+		link: "https://daum.net",
+		position: "center"
 	}
 ];
 
@@ -115,10 +121,13 @@ var adsNow = 1;
 var adsEnd = ads.length - 1;
 var adsSpeed = 1000;
 var adsGap = 4000;
-var interval;
+var adsInterval;
 for(var i in ads) {
 	html  = '<img src="'+ads[i].src+'" class="ads-img w-100 position-absolute" style="top: 0; opacity: 0;">';
-	html += '<div class="ads-slogan position-absolute pt-serif d-flex justify-content-center align-items-center w-50 h-100" style="top: 0; '+ads[i].position+': 0; z-index: 99; opacity: 1;">';
+	html += '<div class="ads-slogan position-absolute pt-serif d-flex justify-content-center align-items-center w-50 h-100" style="top: 0; z-index: 99; opacity: 0;';
+	if(ads[i].position == "left") html += 'left: 0;">';
+	if(ads[i].position == "right") html += 'right: 0;">';
+	if(ads[i].position == "center") html += 'width: 100% !important; text-align: center;">';
 	html += '<ul>';
 	html += '<li class="title">'+ads[i].title+'</li>';
 	html += '<li class="desc">'+ads[i].desc+'</li>';
@@ -138,7 +147,7 @@ $(".ads-img").imagesLoaded(function(){
 });
 
 adsAni();
-interval = setInterval(adsAni, adsGap);
+adsInterval = setInterval(adsAni, adsGap);
 function adsAni() {
 	// pager 처리
 	$(".ads-pager span").removeClass("text-dark").addClass("text-muted");
@@ -156,6 +165,10 @@ function adsAni() {
 		$(".ads-slogan").eq(adsNow).css({"right": "-100%"});
 		$(".ads-slogan").eq(adsNow).stop().animate({"right": 0, "opacity": 1}, adsSpeed/2);
 	}
+	if(ads[adsNow].position == "center") {
+		$(".ads-slogan").eq(adsNow).css({"top": "-50%"});
+		$(".ads-slogan").eq(adsNow).stop().animate({"top": 0, "opacity": 1}, adsSpeed/2);
+	}
 
 	// 배경이미지 애니메이션
 	$(".ads-img").stop().animate({"opacity": 0}, adsSpeed);
@@ -168,4 +181,11 @@ function adsAni() {
 $(".ads-pager span").click(function(){
 	adsNow = $(this).index();
 	adsAni();
+});
+
+$(".ads-wrap, .ads, .ads-pager").hover(function(){
+	clearInterval(adsInterval);
+}, function(){
+	clearInterval(adsInterval);
+	adsInterval = setInterval(adsAni, adsGap);
 });
