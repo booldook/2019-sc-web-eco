@@ -197,7 +197,22 @@ var populars = [
 	{src: "../img/Magni_dolores_600x.jpg", title: "Eaque ipsa quae ab illo", price: "$48.00"}
 ];
 
-for(var i=0; i<7; i++) $(".prds").append($(".prd").eq(0).clone());
+for(var i in populars) {
+	html  = '<ul class="prd my-4 position-relative pointer">';
+	html += '<li class="prd-img"><img src="'+populars[i].src+'" class="w-100"></li>';
+	html += '<li class="prd-title mt-3 f-125">'+populars[i].title+'</li>';
+	html += '<li class="prd-price my-2 f-175">'+populars[i].price+'</li>';
+	html += '<li class="prd-bt">';
+	html += '<button class="btn btn-lg btn-success">Add to Cart</button>';
+	html += '</li>';
+	html += '<li data-toggle="tooltip" data-placement="left" title="Quick View" class="prd-icon prd-view tooltip-bt"><i class="fas fa-eye"></i></li>';
+	html += '<li data-toggle="tooltip" data-placement="left" title="You need to login" class="prd-icon prd-login tooltip-bt"><i class="fas fa-heart"></i></li>';
+	html += '<li data-toggle="tooltip" data-placement="left" title="Add to Compare"  class="prd-icon prd-compare tooltip-bt"><i class="fas fa-balance-scale"></i></li>';
+	html += '</ul>';
+	$(".popular-wrap .prds").append(html);
+}
+
+
 $(".popular-wrap .prd").mouseenter(function(){
 	$(this).find(".prd-icon").css({"opacity": 1});
 });
