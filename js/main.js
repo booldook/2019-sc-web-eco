@@ -186,6 +186,17 @@ $(".ads-wrap, .ads, .ads-pager").hover(function(){
 
 
 // popular
+var populars = [
+	{src: "../img/Adoloremque_600x.jpg", title: "Adoloremque", price: "$48.00"},
+	{src: "../img/Aperiam_600x.jpg", title: "Aperiam", price: "$48.00"},
+	{src: "../img/Architecto_600x.jpg", title: "Architecto", price: "$48.00"},
+	{src: "../img/Beatae_vitae_600x.jpg", title: "Beatae vitae", price: "$48.00"},
+	{src: "../img/Consequuntur_600x.jpg", title: "Consequuntur", price: "$48.00"},
+	{src: "../img/Dicta_600x.jpg", title: "Dicta", price: "$48.00"},
+	{src: "../img/Eaque_ipsa_quae_ab_illo_600x.jpg", title: "Dolores", price: "$48.00"},
+	{src: "../img/Magni_dolores_600x.jpg", title: "Eaque ipsa quae ab illo", price: "$48.00"}
+];
+
 for(var i=0; i<7; i++) $(".prds").append($(".prd").eq(0).clone());
 $(".popular-wrap .prd").mouseenter(function(){
 	$(this).find(".prd-icon").css({"opacity": 1});
