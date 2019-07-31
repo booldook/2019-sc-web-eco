@@ -47,15 +47,21 @@
 .ads-slogan .desc {font-size: 1.25em; margin: 1.25em 0;}
 .ads-slogan .btn {padding: 0.5em 1em;}
 
+.popular-wrap .prd {flex: 0 0 98%;}
+.popular-wrap .prd-title {transition: all 1s;}
+.popular-wrap .prd-title:hover {color: #66a765;}
+
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {
 	.item > li:first-child {max-width: 100%;}
 	.ads-slogan {font-size: 0.5rem;}
+	.popular-wrap .prd {flex: 0 0 49%;}
 }
 /* 768 ~ 991 - md - 태블릿 세로 */
 @media screen and (min-width: 768px) {
 	.banner-wrap {font-size: 1.25rem; /* 8px */}
 	.ads-slogan {font-size: 0.75rem;}
+	.popular-wrap .prd {flex: 0 0 32%;}
 }
 /* 992 ~ 1199 - lg - 태블릿 가로 */
 @media screen and (min-width: 992px) {
@@ -64,6 +70,7 @@
 	.navi-wrap {display: flex;}
 	.banner-wrap {font-size: 1.5rem; /* 8px */}
 	.ads-slogan {font-size: 1rem;}
+	.popular-wrap .prd {flex: 0 0 24%;}
 }
 /* 1200 ~ - xl - PC */
 @media screen and (min-width: 1200px) {

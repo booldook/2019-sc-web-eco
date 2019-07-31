@@ -117,7 +117,7 @@ var ads = [
 
 // for(var i=0; i<ads.length; i++) {
 var html = '';
-var adsNow = 1;
+var adsNow = 0;
 var adsEnd = ads.length - 1;
 var adsSpeed = 1000;
 var adsGap = 4000;
@@ -189,3 +189,7 @@ $(".ads-wrap, .ads, .ads-pager").hover(function(){
 	clearInterval(adsInterval);
 	adsInterval = setInterval(adsAni, adsGap);
 });
+
+
+// popular
+for(var i=0; i<7; i++) $(".prds").append($(".prd").eq(0).clone());
