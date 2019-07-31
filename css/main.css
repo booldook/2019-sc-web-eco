@@ -69,7 +69,12 @@
 .popular-wrap .prd-login {top: 5rem;}
 .popular-wrap .prd-compare {top: 9rem;}
 
-.footer-wrap {}
+/*
+.footer-wrap {
+	background: #e0f4db url(../img/ecofood_04_2048x.png) no-repeat top center;
+	background-size: 100% auto; min-height: 600px; border: 1px solid red;}
+*/
+.footer-wrap {background-color: #e0f4db;}
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {
