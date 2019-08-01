@@ -79,6 +79,10 @@
 .footer-wrap .list:hover {color: #66a765;}
 .footer-wrap .fab {color: #66a765;}
 .footer-wrap .fab:hover {color: #222;}
+.footer-wrap .list {display: none;}
+.footer-wrap .title {border-bottom: 1px solid #66a765; cursor: pointer;}
+.footer-wrap .title:hover {color: #66a765;}
+
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {
@@ -91,6 +95,10 @@
 	.banner-wrap {font-size: 1.25rem; /* 8px */}
 	.ads-slogan {font-size: 0.75rem;}
 	.popular-wrap .prd {flex: 0 0 32%;}
+	.footer-wrap .list {display: block;}
+	.footer-wrap .title {border-bottom: none; cursor: text;}
+	.footer-wrap .title:hover {color: inherit;}
+	.footer-wrap .title > span {display: none;}
 }
 /* 992 ~ 1199 - lg - 태블릿 가로 */
 @media screen and (min-width: 992px) {
