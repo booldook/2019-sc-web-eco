@@ -135,6 +135,7 @@ for(var i in ads) {
 // 배너이미지의 높이를 가져다가 .ads의 높이를 생성
 $(window).resize(function(){
 	$(".ads").outerHeight($(".ads-img").eq(0).outerHeight());
+	$(".footer-wrap .list").attr("style", "");
 });
 $(".ads-img").imagesLoaded(function(){
 	$(window).trigger("resize");
@@ -220,6 +221,16 @@ $(".popular-wrap .prd").mouseleave(function(){
 	$(this).find(".prd-icon").css({"opacity": 0});
 });
 
+
+// footer
+$(".footer-wrap .title").click(function(){
+	if($(this).css("cursor") == "pointer") {
+		$(this).parent().children(".list").toggle();
+		var $span = $(this).children("span");
+		if($span.text() == "+") $span.text("-");
+		else $span.text("+"); 
+	}
+});
 
 
 
