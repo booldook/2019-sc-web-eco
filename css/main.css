@@ -83,6 +83,7 @@
 .footer-wrap .title {border-bottom: 1px solid #66a765; cursor: pointer;}
 .footer-wrap .title:hover {color: #66a765;}
 
+.bt-top {position: fixed; bottom: 2rem; right: 0; z-index: 9999;}
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {

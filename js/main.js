@@ -141,6 +141,11 @@ $(".ads-img").imagesLoaded(function(){
 	$(window).trigger("resize");
 });
 
+// 스크롤 발생 이벤트
+$(window).scroll(function(){
+	var scTop = $(this).scrollTop();
+});
+
 adsAni();
 adsInterval = setInterval(adsAni, adsGap);
 function adsAni() {
