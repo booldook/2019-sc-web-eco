@@ -1,4 +1,4 @@
-$(".fa-user").mouseover(function(){
+$(".fa-user").mouseenter(function(){
 	$(this).next().css({
 		"opacity":1, "transform":"translateY(0)"
 	});
