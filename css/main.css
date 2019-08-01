@@ -83,7 +83,13 @@
 .footer-wrap .title {border-bottom: 1px solid #66a765; cursor: pointer;}
 .footer-wrap .title:hover {color: #66a765;}
 
-.bt-top {position: fixed; bottom: 2rem; right: 0; z-index: 9999;}
+.bt-top {position: fixed; bottom: -4.5rem; right: 0; z-index: 9999; cursor: pointer;
+	transition: all 0.5s; 
+	padding: 1rem 1.5rem 1rem 1.5rem; 
+	background-color: #66a765; 
+}
+.bt-top:hover {background-color: #a8715c; padding: 0.7rem 1.5rem 1.3rem 1.5rem;}
+.bt-top-show {transform: translateY(-7rem);}
 
 /* 576 ~ 767 - sm - 스마트폰 가로 */
 @media screen and (min-width: 576px) {

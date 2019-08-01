@@ -144,7 +144,13 @@ $(".ads-img").imagesLoaded(function(){
 // 스크롤 발생 이벤트
 $(window).scroll(function(){
 	var scTop = $(this).scrollTop();
+	if(scTop > 400) $(".bt-top").addClass("bt-top-show");
+	else $(".bt-top").removeClass("bt-top-show");
 });
+$(".bt-top").click(function(){
+	$("html, body").stop().animate({"scrollTop": 0}, 500);
+});
+
 
 adsAni();
 adsInterval = setInterval(adsAni, adsGap);
